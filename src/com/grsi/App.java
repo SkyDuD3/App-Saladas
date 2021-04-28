@@ -16,6 +16,7 @@ public class App extends javax.swing.JFrame {
      */
     public App() {
         initComponents();
+        vinagres.setSelectedIndex(-1);
     }
 
     /**
@@ -29,29 +30,29 @@ public class App extends javax.swing.JFrame {
 
         buttonGroup1 = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
-        jCheckBox2 = new javax.swing.JCheckBox();
-        jCheckBox3 = new javax.swing.JCheckBox();
+        condimento2 = new javax.swing.JCheckBox();
+        condimento3 = new javax.swing.JCheckBox();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jList1 = new javax.swing.JList<>();
+        lista = new javax.swing.JList<>();
         jLabel2 = new javax.swing.JLabel();
-        jCheckBox1 = new javax.swing.JCheckBox();
+        condimento1 = new javax.swing.JCheckBox();
         jLabel1 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        vinagres = new javax.swing.JComboBox<>();
         jPanel2 = new javax.swing.JPanel();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jSlider1 = new javax.swing.JSlider();
+        temperatura2 = new javax.swing.JRadioButton();
+        temperatura1 = new javax.swing.JRadioButton();
+        tamanho = new javax.swing.JSlider();
         jLabel3 = new javax.swing.JLabel();
-        jSpinner1 = new javax.swing.JSpinner();
+        quantidade = new javax.swing.JSpinner();
         jLabel4 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        display = new javax.swing.JTextArea();
         jPanel4 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jToggleButton1 = new javax.swing.JToggleButton();
-        jButton2 = new javax.swing.JButton();
+        encomenda = new javax.swing.JButton();
+        loja = new javax.swing.JToggleButton();
+        reset = new javax.swing.JButton();
         menuBar = new javax.swing.JMenuBar();
         fileMenu = new javax.swing.JMenu();
         openMenuItem = new javax.swing.JMenuItem();
@@ -71,24 +72,24 @@ public class App extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(204, 255, 255));
 
-        jCheckBox2.setText("Cebola");
+        condimento2.setText("Cebola");
 
-        jCheckBox3.setText("Coentros");
+        condimento3.setText("Coentros");
 
-        jList1.setModel(new javax.swing.AbstractListModel<String>() {
+        lista.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Alface", "Cenoura", "Tomate" };
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
         });
-        jScrollPane1.setViewportView(jList1);
+        jScrollPane1.setViewportView(lista);
 
         jLabel2.setText("Salada:");
 
-        jCheckBox1.setText("Pepino");
+        condimento1.setText("Pepino");
 
         jLabel1.setText("Salada:");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Vinagre Branco", "Vinagre Tinto" }));
+        vinagres.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Vinagre Branco", "Vinagre Tinto" }));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -98,16 +99,16 @@ public class App extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jCheckBox1)
+                        .addComponent(condimento1)
                         .addGap(18, 18, 18)
-                        .addComponent(jCheckBox2)
+                        .addComponent(condimento2)
                         .addGap(18, 18, 18)
-                        .addComponent(jCheckBox3))
+                        .addComponent(condimento3))
                     .addComponent(jLabel1)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(vinagres, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jLabel2)))
         );
         jPanel1Layout.setVerticalGroup(
@@ -117,15 +118,15 @@ public class App extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBox1)
-                    .addComponent(jCheckBox2)
-                    .addComponent(jCheckBox3))
+                    .addComponent(condimento1)
+                    .addComponent(condimento2)
+                    .addComponent(condimento3))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(vinagres, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
                 .addContainerGap())
@@ -133,21 +134,23 @@ public class App extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(102, 255, 255));
 
-        buttonGroup1.add(jRadioButton1);
-        jRadioButton1.setText("Natural");
+        buttonGroup1.add(temperatura2);
+        temperatura2.setText("Natural");
 
-        buttonGroup1.add(jRadioButton2);
-        jRadioButton2.setText("Fria");
+        buttonGroup1.add(temperatura1);
+        temperatura1.setText("Fria");
 
-        jSlider1.setMajorTickSpacing(1);
-        jSlider1.setMaximum(3);
-        jSlider1.setMinimum(1);
-        jSlider1.setPaintLabels(true);
-        jSlider1.setPaintTicks(true);
-        jSlider1.setSnapToTicks(true);
-        jSlider1.setValue(2);
+        tamanho.setMajorTickSpacing(1);
+        tamanho.setMaximum(3);
+        tamanho.setMinimum(1);
+        tamanho.setPaintLabels(true);
+        tamanho.setPaintTicks(true);
+        tamanho.setSnapToTicks(true);
+        tamanho.setValue(2);
 
         jLabel3.setText("Tamanho:");
+
+        quantidade.setModel(new javax.swing.SpinnerNumberModel(1, 1, null, 1));
 
         jLabel4.setText("Quantidade:");
 
@@ -160,16 +163,16 @@ public class App extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel3)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jRadioButton1)
+                        .addComponent(temperatura2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jRadioButton2)
+                        .addComponent(temperatura1)
                         .addGap(18, 18, 18)
                         .addComponent(jLabel4)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(quantidade, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(133, Short.MAX_VALUE))
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addComponent(jSlider1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(tamanho, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -177,14 +180,14 @@ public class App extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(13, 13, 13)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jRadioButton1)
-                    .addComponent(jRadioButton2)
-                    .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(temperatura2)
+                    .addComponent(temperatura1)
+                    .addComponent(quantidade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4))
                 .addGap(11, 11, 11)
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSlider1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(tamanho, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(102, Short.MAX_VALUE))
         );
 
@@ -192,9 +195,9 @@ public class App extends javax.swing.JFrame {
 
         jLabel5.setText("A tua salada:");
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane2.setViewportView(jTextArea1);
+        display.setColumns(20);
+        display.setRows(5);
+        jScrollPane2.setViewportView(display);
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -221,22 +224,32 @@ public class App extends javax.swing.JFrame {
 
         jPanel4.setBackground(new java.awt.Color(0, 153, 153));
 
-        jButton1.setText("Encomendar salada");
+        encomenda.setText("Encomendar salada");
 
-        jToggleButton1.setText("Loja aberta");
+        loja.setText("Loja aberta");
+        loja.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                lojaActionPerformed(evt);
+            }
+        });
 
-        jButton2.setText("Reset");
+        reset.setText("Reset");
+        reset.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                resetActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addComponent(jToggleButton1)
+                .addComponent(loja)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton1)
+                .addComponent(encomenda)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton2)
+                .addComponent(reset)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
@@ -244,9 +257,9 @@ public class App extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                 .addContainerGap(10, Short.MAX_VALUE)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jToggleButton1)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2))
+                    .addComponent(loja)
+                    .addComponent(encomenda)
+                    .addComponent(reset))
                 .addContainerGap())
         );
 
@@ -350,6 +363,45 @@ public class App extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_exitMenuItemActionPerformed
 
+    private void lojaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lojaActionPerformed
+        if (loja.isSelected()) {
+            loja.setText("Loja Fechada");
+            condimento1.setEnabled(false);
+            condimento2.setEnabled(false);
+            condimento3.setEnabled(false);
+            lista.setEnabled(false);
+            vinagres.setEnabled(false);
+            temperatura1.setEnabled(false);
+            temperatura2.setEnabled(false);
+            vinagres.setEnabled(false);
+            quantidade.setEnabled(false);
+            tamanho.setEnabled(false);
+            reset.setEnabled(false);
+            encomenda.setEnabled(false);
+            display.setEnabled(false);
+        } else {
+            loja.setText("Loja Aberta");
+            condimento1.setEnabled(true);
+            condimento2.setEnabled(true);
+            condimento3.setEnabled(true);
+            lista.setEnabled(true);
+            vinagres.setEnabled(true);
+            temperatura1.setEnabled(true);
+            temperatura2.setEnabled(true);
+            vinagres.setEnabled(true);
+            quantidade.setEnabled(true);
+            tamanho.setEnabled(true);
+            reset.setEnabled(true);
+            encomenda.setEnabled(true);
+            encomenda.setEnabled(true);
+
+        }
+    }//GEN-LAST:event_lojaActionPerformed
+
+    private void resetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetActionPerformed
+        limparcampos();
+    }//GEN-LAST:event_resetActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -388,43 +440,54 @@ public class App extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuItem aboutMenuItem;
     private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.JCheckBox condimento1;
+    private javax.swing.JCheckBox condimento2;
+    private javax.swing.JCheckBox condimento3;
     private javax.swing.JMenuItem contentsMenuItem;
     private javax.swing.JMenuItem copyMenuItem;
     private javax.swing.JMenuItem cutMenuItem;
     private javax.swing.JMenuItem deleteMenuItem;
+    private javax.swing.JTextArea display;
     private javax.swing.JMenu editMenu;
+    private javax.swing.JButton encomenda;
     private javax.swing.JMenuItem exitMenuItem;
     private javax.swing.JMenu fileMenu;
     private javax.swing.JMenu helpMenu;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JCheckBox jCheckBox1;
-    private javax.swing.JCheckBox jCheckBox2;
-    private javax.swing.JCheckBox jCheckBox3;
-    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JList<String> jList1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JSlider jSlider1;
-    private javax.swing.JSpinner jSpinner1;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JToggleButton jToggleButton1;
+    private javax.swing.JList<String> lista;
+    private javax.swing.JToggleButton loja;
     private javax.swing.JMenuBar menuBar;
     private javax.swing.JMenuItem openMenuItem;
     private javax.swing.JMenuItem pasteMenuItem;
+    private javax.swing.JSpinner quantidade;
+    private javax.swing.JButton reset;
     private javax.swing.JMenuItem saveAsMenuItem;
     private javax.swing.JMenuItem saveMenuItem;
+    private javax.swing.JSlider tamanho;
+    private javax.swing.JRadioButton temperatura1;
+    private javax.swing.JRadioButton temperatura2;
+    private javax.swing.JComboBox<String> vinagres;
     // End of variables declaration//GEN-END:variables
 
+    private void limparcampos() {
+        vinagres.setSelectedIndex(-1);
+        lista.getSelectionModel().clearSelection();
+        buttonGroup1.clearSelection();
+        tamanho.setValue(2);
+        quantidade.setValue(1);
+        condimento1.setSelected(false);
+        condimento2.setSelected(false);
+        condimento3.setSelected(false);
+        display.setText(" ");
+    }
 }
