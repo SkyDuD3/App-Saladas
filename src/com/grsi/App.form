@@ -470,6 +470,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Encomendar salada"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="encomendaActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JToggleButton" name="loja">
           <Properties>

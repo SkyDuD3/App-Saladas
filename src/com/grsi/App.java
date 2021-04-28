@@ -225,6 +225,11 @@ public class App extends javax.swing.JFrame {
         jPanel4.setBackground(new java.awt.Color(0, 153, 153));
 
         encomenda.setText("Encomendar salada");
+        encomenda.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                encomendaActionPerformed(evt);
+            }
+        });
 
         loja.setText("Loja aberta");
         loja.addActionListener(new java.awt.event.ActionListener() {
@@ -393,7 +398,7 @@ public class App extends javax.swing.JFrame {
             tamanho.setEnabled(true);
             reset.setEnabled(true);
             encomenda.setEnabled(true);
-            encomenda.setEnabled(true);
+            display.setEnabled(true);
 
         }
     }//GEN-LAST:event_lojaActionPerformed
@@ -401,6 +406,34 @@ public class App extends javax.swing.JFrame {
     private void resetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetActionPerformed
         limparcampos();
     }//GEN-LAST:event_resetActionPerformed
+
+    private void encomendaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_encomendaActionPerformed
+        String jTemp = "";
+        if (temperatura1.isSelected()) {
+            jTemp = "Frias";
+        } else {
+            jTemp = "Naturais";
+        }
+
+        display.setText("Você encomendou " + quantidade.getValue() + " saladas :" + jTemp + "\n");
+
+        if (condimento1.isSelected()) {
+            display.setText(display.getText() + "Pepino \t");
+        }
+        if (condimento2.isSelected()) {
+            display.setText(display.getText() + "Cebola \t");
+        }
+        if (condimento3.isSelected()) {
+            display.setText(display.getText() + "Coentros \t");
+        }
+
+        display.append(lista.getSelectedValuesList() + " \t ");
+
+        display.setText(display.getText() + "\n" + "O vinagre selecionado foi: ");
+        if (vinagres.getSelectedItem().toString() != null) {
+            display.setText(display.getText() + "\n" + vinagres.getItemAt(vinagres.getSelectedIndex()));
+        }
+    }//GEN-LAST:event_encomendaActionPerformed
 
     /**
      * @param args the command line arguments
