@@ -409,13 +409,25 @@ public class App extends javax.swing.JFrame {
 
     private void encomendaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_encomendaActionPerformed
         String jTemp = "";
+        String jTam = "";
+
+        if (tamanho.getValue() == 1) {
+            jTam = "Pequeno";
+        }
+        if (tamanho.getValue() == 2) {
+            jTam = "Médio";
+        }
+        if (tamanho.getValue() == 3) {
+            jTam = "Gigantesco";
+        }
+
         if (temperatura1.isSelected()) {
             jTemp = "Frias";
         } else {
             jTemp = "Naturais";
         }
 
-        display.setText("Você encomendou " + quantidade.getValue() + " saladas :" + jTemp + "\n");
+        display.setText("Você encomendou " + quantidade.getValue() + " saladas: " + jTemp +" de tamanho " +jTam +"\n");
 
         if (condimento1.isSelected()) {
             display.setText(display.getText() + "Pepino \t");
